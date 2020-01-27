@@ -12,7 +12,7 @@ type House struct {
 	region             string
 }
 
-func sortByPriceDesk(a, b House) bool {
+func sortByPriceDesс(a, b House) bool {
 	return a.price > b.price
 }
 func sortByPriceAsc(a, b House) bool {
@@ -22,7 +22,7 @@ func sortByPriceAsc(a, b House) bool {
 func sortByPrice(data []House, howToSort string) []House {
 	if howToSort == "DESC" {
 		sort.Slice(data, func(i, j int) bool {
-			return sortByPriceDesk(data[i], data[j])
+			return sortByPriceDesс(data[i], data[j])
 		})
 	} else if howToSort == "ASC" {
 		sort.Slice(data, func(i, j int) bool {
@@ -32,7 +32,7 @@ func sortByPrice(data []House, howToSort string) []House {
 	return data
 }
 
-func sortByDistanceDesk(a, b House) bool {
+func sortByDistanceDesс(a, b House) bool {
 	return a.distanceFromCenter > b.distanceFromCenter
 }
 func sortByDistanceAsc(a, b House) bool {
@@ -42,7 +42,7 @@ func sortByDistanceAsc(a, b House) bool {
 func sortByDistance(data []House, howToSort string) []House {
 	if howToSort == "DESC" {
 		sort.Slice(data, func(i, j int) bool {
-			return sortByDistanceDesk(data[i], data[j])
+			return sortByDistanceDesс(data[i], data[j])
 		})
 	} else if howToSort == "ASC" {
 		sort.Slice(data, func(i, j int) bool {
